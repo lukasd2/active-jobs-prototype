@@ -28,9 +28,14 @@
             media="screen"
             href="css/jobsearch.css"
         />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+            integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+            crossorigin="anonymous"
+        />
 
-        <script src="js/main.js"></script>
+        <script src="js/jobsearch.js"></script>
     </head>
     <body>
         <div class="app">
@@ -40,7 +45,7 @@
                 </h1>
                 <a
                     class="page-logo"
-                    href="#"
+                    href="index.html"
                     title="Torna alla pagina principale"
                 >
                     <img
@@ -118,67 +123,127 @@
                     </form>
                 </section>
                 <section class="job-filters">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <p class="control">
-                            <a class="button"> One </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Two </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Three </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Four </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Five </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Six </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Seven </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Eight </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Nine </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Ten </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Eleven </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Twelve </a>
-                        </p>
-                        <p class="control">
-                            <a class="button"> Thirteen </a>
-                        </p>
-                    </div>
+                    <h2 class="filters__header">Raffina la tua ricerca</h2>
+                    <form>
+                        <fieldset class="filters">
+                            <div class="filters-checkbox">
+                                <div class="remote-job">
+                                    <input
+                                        type="checkbox"
+                                        id="remote-job"
+                                        name="remote-job"
+                                    />
+                                    <label for="remote-job"
+                                        >Lavoro da remoto</label
+                                    >
+                                </div>
+                                <div class="direct-job">
+                                    <input
+                                        type="checkbox"
+                                        id="direct-job"
+                                        name="direct-job"
+                                    />
+                                    <label for="direct-job"
+                                        >Offerte dirette</label
+                                    >
+                                </div>
+                                <div class="active-job">
+                                    <input
+                                        type="checkbox"
+                                        id="active-job"
+                                        name="active-job"
+                                    />
+                                    <label for="active-job"
+                                        >Solo offerte
+                                        <em>disponibili</em></label
+                                    >
+                                </div>
+                            </div>
+                            <div class="filters_selects">
+                                <div class="published-date">
+                                    <label for="published-within__date"
+                                        >Data di pubblicazione</label
+                                    >
+                                    <div class="select">
+                                        <select
+                                            name="published-within__date"
+                                            id="published-within__date"
+                                        >
+                                            <option>Tutte le offerte</option>
+                                            <option>Ultime 24 ore</option>
+                                            <option>Ultimi 3 giorni</option>
+                                            <option>Ultimi 7 giorni</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="published-location">
+                                    <label for="published-within__location"
+                                        >Entro chilometri</label
+                                    >
+                                    <div class="select">
+                                        <select
+                                            name="published-within__location"
+                                            id="published-within__location"
+                                        >
+                                            <option>Tutte le offerte</option>
+                                            <option>1 chilometro</option>
+                                            <option>3 chilometri</option>
+                                            <option>5 chilometri</option>
+                                            <option>10 chilometri</option>
+                                            <option>25 chilometri</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="published-contract">
+                                    <label for="published-within__location"
+                                        >Tipo di contratto</label
+                                    >
+                                    <div class="select">
+                                        <select
+                                            name="contract-type"
+                                            id="contract-type"
+                                        >
+                                            <option>Tutte le offerte</option>
+                                            <option>Indeterminato</option>
+                                            <option>Determinato</option>
+                                            <option>Stage/tirocinio</option>
+                                            <option>Freelance</option>
+                                            <option>Part-time</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
                 </section>
                 <section class="job-search-content">
                     <aside class="user-sidebar"></aside>
                     <article class="job-listings">
                         <article class="job-listing">
                             <header class="job-listing__header">
-                            <h4 class="job-listing__title">
-                                Programmatore Java
-                            </h4>
-                            <i class="job-listing__favorite far fa-heart"></i>
-                        </header>
-                            <p class="job-listing__location">Pisa, Toscana</p>
-                            <div class="job-company">
-                                <img
-                                    src="images/logoProntoLavoro.svg"
-                                    height="50px"
-                                    width="50px"
-                                    alt="company logo"
-                                />
-                                <p class="job-listing__company">Hyperborea</p>
+                                <h4 class="job-listing__title">
+                                    Programmatore Java
+                                </h4>
+                                <i
+                                    class="job-listing__favorite far fa-heart"
+                                ></i>
+                            </header>
+                            <div class="job-main-info">
+                                <p class="job-listing__location">
+                                    Pisa, Toscana
+                                </p>
+                                <div class="job-company-info">
+                                    <img
+                                        class="job-company-info__logo"
+                                        src="images/logoProntoLavoro.svg"
+                                        height="50px"
+                                        width="50px"
+                                        alt="company logo"
+                                    />
+                                    <p class="job-listing__company">
+                                        Hyperborea
+                                    </p>
+                                </div>
                             </div>
 
                             <p class="job-listing__description">
@@ -189,30 +254,149 @@
                                 ipsa fugit!
                             </p>
                             <footer class="job-listing__footer">
-                            <p class="job-listing__date">12/11/2020</p>
-                            <p class="job-listing__contract-type">
-                                Tempo indeterminato
+                                <p class="job-listing__date">12/11/2020</p>
+                                <p class="job-listing__contract-type">
+                                    Tempo indeterminato
+                                </p>
+                                <i
+                                    class="job-listing__verified fas fa-check-square"
+                                ></i>
+                            </footer>
+                        </article>
+                        <article class="job-listing">
+                            <header class="job-listing__header">
+                                <h4 class="job-listing__title">
+                                    Programmatore Java
+                                </h4>
+                                <i
+                                    class="job-listing__favorite far fa-heart"
+                                ></i>
+                            </header>
+                            <div class="job-main-info">
+                                <p class="job-listing__location">
+                                    Pisa, Toscana
+                                </p>
+                                <div class="job-company-info">
+                                    <img
+                                        class="job-company-info__logo"
+                                        src="images/logoProntoLavoro.svg"
+                                        height="50px"
+                                        width="50px"
+                                        alt="company logo"
+                                    />
+                                    <p class="job-listing__company">
+                                        Hyperborea
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p class="job-listing__description">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Sit blanditiis, recusandae
+                                quia dignissimos beatae cum error perferendis
+                                deserunt non. Pariatur tempore error laboriosam
+                                ipsa fugit!
                             </p>
-                            <p>Spunta verde "verifcato"</p>
-                            <footer/>
+                            <footer class="job-listing__footer">
+                                <p class="job-listing__date">12/11/2020</p>
+                                <p class="job-listing__contract-type">
+                                    Tempo indeterminato
+                                </p>
+                                <i
+                                    class="job-listing__verified fas fa-check-square"
+                                ></i>
+                            </footer>
                         </article>
                         <article class="job-listing">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Sit blanditiis, recusandae quia dignissimos
-                            beatae cum error perferendis deserunt non. Pariatur
-                            tempore error laboriosam ipsa fugit! Modi ut dolorum
-                            perspiciatis placeat!
-                        </article>
-                        <article class="job-listing">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Sit blanditiis, recusandae quia dignissimos
-                            beatae cum error perferendis deserunt non. Pariatur
-                            tempore error laboriosam ipsa fugit! Modi ut dolorum
-                            perspiciatis placeat!
+                            <header class="job-listing__header">
+                                <h4 class="job-listing__title">
+                                    Programmatore Java
+                                </h4>
+                                <i
+                                    class="job-listing__favorite far fa-heart"
+                                ></i>
+                            </header>
+                            <div class="job-main-info">
+                                <p class="job-listing__location">
+                                    Pisa, Toscana
+                                </p>
+                                <div class="job-company-info">
+                                    <img
+                                        class="job-company-info__logo"
+                                        src="images/logoProntoLavoro.svg"
+                                        height="50px"
+                                        width="50px"
+                                        alt="company logo"
+                                    />
+                                    <p class="job-listing__company">
+                                        Hyperborea
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p class="job-listing__description">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Sit blanditiis, recusandae
+                                quia dignissimos beatae cum error perferendis
+                                deserunt non. Pariatur tempore error laboriosam
+                                ipsa fugit!
+                            </p>
+                            <footer class="job-listing__footer">
+                                <p class="job-listing__date">12/11/2020</p>
+                                <p class="job-listing__contract-type">
+                                    Tempo indeterminato
+                                </p>
+                                <i
+                                    class="job-listing__verified fas fa-check-square"
+                                ></i>
+                            </footer>
                         </article>
                     </article>
-
+                    <div class="modal" id="openModal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title">Programmatore Java</p>
+                                <button
+                                    class="delete"
+                                    aria-label="close"
+                                ></button>
+                            </header>
+                            <section class="modal-card-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Possimus labore non ipsam
+                                    sequi vitae, iste, at nobis modi voluptatum
+                                    porro officia accusantium totam quasi
+                                    laborum! Molestias provident quidem
+                                    molestiae impedit!
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Possimus labore non ipsam
+                                    sequi vitae, iste, at nobis modi voluptatum
+                                    porro officia accusantium totam quasi
+                                    laborum! Molestias provident quidem
+                                    molestiae impedit!
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Possimus labore non ipsam
+                                    sequi vitae, iste, at nobis modi voluptatum
+                                    porro officia accusantium totam quasi
+                                    laborum! Molestias provident quidem
+                                    molestiae impedit!
+                                </p>
+                            </section>
+                            <footer class="modal-card-foot">
+                                <button class="button is-success">
+                                    Candidati
+                                </button>
+                            </footer>
+                        </div>
+                    </div>
                     <section class="work-preview--empty">
+                        <i class="work-preview__arrow fas fa-reply"></i>
                         Click on a tab to see details...
                     </section>
                 </section>

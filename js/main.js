@@ -16,6 +16,7 @@ const initAppHandlers = () => {
         false
     );
 
+
     const searchForm = document.querySelector(".search-form");
     function searchResult(ev) {
         ev.preventDefault();
@@ -29,7 +30,7 @@ const initAppHandlers = () => {
         };
 
         console.log(search);
-        localStorage.setItem('search', JSON.stringify(search));
+        localStorage.setItem("search", JSON.stringify(search));
         location.href = "jobsearch.html";
     }
 
