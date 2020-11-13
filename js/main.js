@@ -4,11 +4,10 @@ window.onload = () => {
 };
 
 const initAppHandlers = () => {
-    let menuHamburgerBtn = document.querySelector(".btn-hamburger");
+    const menuHamburgerBtn = document.querySelector(".btn-hamburger");
     menuHamburgerBtn.addEventListener(
         "click",
         () => {
-            console.log("click");
             document.querySelector(".page-header").classList.toggle("nav-open");
             document
                 .querySelector(".btn-hamburger ")
@@ -16,4 +15,23 @@ const initAppHandlers = () => {
         },
         false
     );
+
+    const searchForm = document.querySelector(".search-form");
+    function searchResult(ev) {
+        ev.preventDefault();
+        const jobName = this.querySelector("[name=jobname]").value;
+        const locationName = this.querySelector("[name=location]").value;
+        console.log(jobName, locationName);
+
+        const search = {
+            jobName,
+            locationName,
+        };
+
+        console.log(search);
+        localStorage.setItem('search', JSON.stringify(search));
+        location.href = "jobsearch.html";
+    }
+
+    searchForm.addEventListener("submit", searchResult);
 };

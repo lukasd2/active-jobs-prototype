@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pronto Lavoro - Lista dei lavori</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="css/bulma.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="css/header.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="css/search.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="css/jobsearch.css"
+        />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="app">
+            <header class="page-header">
+                <h1 class="page-title">
+                    Sito di ricerca dei lavori disponibili in tempo reale
+                </h1>
+                <a
+                    class="page-logo"
+                    href="#"
+                    title="Torna alla pagina principale"
+                >
+                    <img
+                        class="page-logo__img"
+                        src="images/logoProntoLavoro.svg"
+                        alt="Logo della piattaforma ProntoLavoro"
+                    />
+                </a>
+                <nav class="page-nav">
+                    <h2 class="navigation-heading">Page navigation</h2>
+                    <div class="page-nav__elements">
+                        <ul class="page-nav__list">
+                            <li class="page-nav__item">
+                                <a href="" class="page-nav__link"
+                                    >Pagina principale</a
+                                >
+                            </li>
+                            <li class="page-nav__item">
+                                <a href="" class="page-nav__link"
+                                    >Lista dei lavori</a
+                                >
+                            </li>
+                            <li class="page-nav__item">
+                                <a href="" class="page-nav__link"
+                                    >Pubblica annuncio</a
+                                >
+                            </li>
+                        </ul>
+                        <div class="buttons-authentication">
+                            <button class="btn-login button is-outlined">
+                                Accedi
+                            </button>
+                            <button class="btn-register button">
+                                Registrati
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hamburger-button">
+                        <a
+                            class="btn-hamburger navbar-burger"
+                            aria-label="Open
+                        the
+                        menu"
+                            tabindex="0"
+                            aria-expanded="false"
+                        >
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <main class="page-content">
+                <section class="section-job-search">
+                    <h3 class="section-heading">Section</h3>
+                    <form class="search-form">
+                        <input
+                            class="search__what input"
+                            type="text"
+                            name="jobname"
+                            placeholder="Attività, Ruolo..."
+                        />
+                        <input
+                            class="search__where input"
+                            type="text"
+                            name="location"
+                            placeholder="Località, Da remoto..."
+                        />
+                        <input
+                            type="submit"
+                            value="Cerca"
+                            class="search__search-btn button"
+                        />
+                    </form>
+                </section>
+                <section class="job-filters">
+                    <div class="field is-grouped is-grouped-multiline">
+                        <p class="control">
+                            <a class="button"> One </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Two </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Three </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Four </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Five </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Six </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Seven </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Eight </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Nine </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Ten </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Eleven </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Twelve </a>
+                        </p>
+                        <p class="control">
+                            <a class="button"> Thirteen </a>
+                        </p>
+                    </div>
+                </section>
+                <section class="job-search-content">
+                    <aside class="user-sidebar"></aside>
+                    <article class="job-listings">
+                        <article class="job-listing">
+                            <header class="job-listing__header">
+                            <h4 class="job-listing__title">
+                                Programmatore Java
+                            </h4>
+                            <i class="job-listing__favorite far fa-heart"></i>
+                        </header>
+                            <p class="job-listing__location">Pisa, Toscana</p>
+                            <div class="job-company">
+                                <img
+                                    src="images/logoProntoLavoro.svg"
+                                    height="50px"
+                                    width="50px"
+                                    alt="company logo"
+                                />
+                                <p class="job-listing__company">Hyperborea</p>
+                            </div>
+
+                            <p class="job-listing__description">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Sit blanditiis, recusandae
+                                quia dignissimos beatae cum error perferendis
+                                deserunt non. Pariatur tempore error laboriosam
+                                ipsa fugit!
+                            </p>
+                            <footer class="job-listing__footer">
+                            <p class="job-listing__date">12/11/2020</p>
+                            <p class="job-listing__contract-type">
+                                Tempo indeterminato
+                            </p>
+                            <p>Spunta verde "verifcato"</p>
+                            <footer/>
+                        </article>
+                        <article class="job-listing">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Sit blanditiis, recusandae quia dignissimos
+                            beatae cum error perferendis deserunt non. Pariatur
+                            tempore error laboriosam ipsa fugit! Modi ut dolorum
+                            perspiciatis placeat!
+                        </article>
+                        <article class="job-listing">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Sit blanditiis, recusandae quia dignissimos
+                            beatae cum error perferendis deserunt non. Pariatur
+                            tempore error laboriosam ipsa fugit! Modi ut dolorum
+                            perspiciatis placeat!
+                        </article>
+                    </article>
+
+                    <section class="work-preview--empty">
+                        Click on a tab to see details...
+                    </section>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
