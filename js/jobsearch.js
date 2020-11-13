@@ -26,6 +26,7 @@ const initAppHandlers = () => {
     const closeModal = openModal.querySelector(".delete");
     closeModal.addEventListener("click", () => {
         openModal.classList.remove("is-active");
+        openModal.classList.remove("is-clipped");
     });
 };
 
@@ -47,22 +48,24 @@ function showJobDetails(ev) {
     const jobListingsContainer = document.querySelector(".job-listings");
     let target = ev.target;
     console.log(target);
-    if (jobListingsContainer.contains(target)) {
+    if (target.classList.contains("job-listing__favorite")) {
+        // target on favorites icon
+        target.classList.toggle("is-red");
+    } else if (jobListingsContainer.contains(target)) {
+        // target of job card
         console.log("success");
         if (checkResultion() <= 768) {
             const openModal = document.getElementById("openModal");
             openModal.classList.add("is-active");
+            openModal.classList.add("is-clipped");
         } else {
             const jobListingsContainer = document.querySelector(
                 ".work-preview--empty"
             );
+            const objectResult = JSON.parse(jobsList);
             jobListingsContainer.innerHTML = "";
-            jobListingsContainer.append(
-                `<p>This a random text from document</p>`
-            );
+            jobListingsContainer.append(JSON.stringify(objectResult));
         }
-    } else {
-        console.log(ev.target);
     }
 }
 
@@ -94,8 +97,8 @@ function getSearchInputReferences() {
     const locationName = document.querySelector("[name=location]");
     return { jobName, locationName };
 }
-
-const jobsList = {
+const jobsList = '{"result":true, "count":42}';
+const jobssList = {
     title: "Programmatore Java",
     location: "Pisa",
     region: "Toscana",

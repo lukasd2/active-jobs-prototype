@@ -1,0 +1,28 @@
+.page-footer {
+    background-color: #f6f8f9;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-nav {
+    flex: 1;
+}
+
+.footer-jobpost {
+    flex: 1;
+}
+
+@media only screen and (min-width: 48em) {
+    .page-footer {
+        font-size: 1.286rem;
+    }
+
+    .footer-nav__list {
+        flex-direction: column;
+    }
+
+    .footer-nav__item {
+        padding: 20px 0px;
+    }
+}
