@@ -25,7 +25,7 @@
 .remote-job,
 .direct-job,
 .active-job {
-    padding: 6px 0px;
+    padding: 10px 0px;
 }
 
 .filters_selects {
@@ -37,7 +37,7 @@
 .published-date,
 .published-location,
 .published-contract {
-    padding: 8px 0px;
+    padding: 10px 0px;
 }
 
 .filters_selects label {
@@ -169,7 +169,7 @@
 
 .info__description {
     text-align: justify;
-    padding: 10px;
+    padding: 15px;
 }
 
 .info__description ol {
@@ -181,13 +181,19 @@
 }
 
 .info__task {
-    padding: 5px;
+    padding: 10px;
     font-weight: 600;
 }
 
 .modal-card-foot {
     display: flex;
     justify-content: center;
+}
+
+.btn-apply {
+    background-color: #FFA500;
+    color: #f2f2f2;
+    padding: 25px;
 }
 
 @media only screen and (min-width: 48em) {
@@ -204,7 +210,7 @@
     .job-search-content {
         grid-column: 1/13;
         display: grid;
-        grid-template-columns: 0.25fr 1fr 1fr 1fr 0.25fr 1fr 1fr 1fr;
+        grid-template-columns: 0.2fr 1fr 1fr 1fr 0.1fr 1fr 1fr 1fr 0.2fr;
     }
 
     .filters {
@@ -297,13 +303,23 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        border-radius: 10px;
+        padding: 25px;
+    }
+    .job-details__title {
+        font-size: 1.4rem;
     }
 
     .work-preview {
         font-size: 1rem;
     }
+
     .work-preview__arrow {
         font-size: 10em;
         color: #18a0fb;
+    }
+    .info__main {
+        padding: 20px 20px;
     }
 }
