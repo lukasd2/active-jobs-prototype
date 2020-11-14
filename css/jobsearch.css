@@ -3,7 +3,7 @@
 }
 
 .filters__header {
-    font-size: 1.1rem;
+    font-size: 1.714rem;
 }
 
 .filters {
@@ -76,10 +76,6 @@
     font-size: 150%;
     left: 0.0625em;
     top: -0.25em;
-}
-
-.user-sidebar {
-    display: none;
 }
 
 .job-listings {
@@ -161,6 +157,39 @@
     color: green;
 }
 
+.work-preview {
+    display: none;
+}
+
+.info__main {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.info__description {
+    text-align: justify;
+    padding: 10px;
+}
+
+.info__description ol {
+    padding-left: 5px;
+}
+
+.info__description li {
+    padding-bottom: 4px;
+}
+
+.info__task {
+    padding: 5px;
+    font-weight: 600;
+}
+
+.modal-card-foot {
+    display: flex;
+    justify-content: center;
+}
+
 @media only screen and (min-width: 48em) {
     .search__what,
     .search__where,
@@ -178,11 +207,21 @@
         grid-template-columns: 0.25fr 1fr 1fr 1fr 0.25fr 1fr 1fr 1fr;
     }
 
-    .user-sidebar {
-        grid-column: 1/1;
-        width: 70%;
-        background-color: brown;
-        height: 500px;
+    .filters {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .filters_selects {
+        flex-direction: row;
+    }
+
+    .published-date,
+    .published-location,
+    .published-contract {
+        display: flex;
+        flex-direction: column;
+        padding-right: 10%;
     }
 
     .job-listings {
@@ -192,7 +231,6 @@
     }
 
     .job-listing {
-        border: 1px solid black;
         cursor: pointer;
         border-radius: 5% 10% 10% 5%;
         height: 225px;
@@ -246,20 +284,23 @@
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
-        flex: 1;
         align-items: flex-end;
+        margin-bottom: 10px;
     }
     .job-listing__verified {
-        font-size: 40px;
+        font-size: 25px;
         color: green;
     }
 
-    .work-preview--empty {
+    .work-preview {
         grid-column: 6/9;
-        border: 1px solid green;
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .work-preview {
+        font-size: 1rem;
     }
     .work-preview__arrow {
         font-size: 10em;

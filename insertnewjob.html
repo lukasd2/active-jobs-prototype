@@ -20,6 +20,12 @@
             rel="stylesheet"
             type="text/css"
             media="screen"
+            href="css/insertnewjob.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
             href="css/footer.css"
         />
     </head>
@@ -88,32 +94,152 @@
                 </nav>
             </header>
             <main class="page-content">
-                <h1>Inserisci nuovo lavoro:</h1>
+                <h2 class="page-hero">Pubblica una nuova offerta di lavoro</h2>
 
-                <form class="insert-job">form</form>
+                <form class="insert-job">
+                    <fieldset class="job__basic-info">
+                        <legend>Informazioni principali</legend>
+                        <div class="control">
+                            <label for="job-title">Posizione offerta</label>
+                            <input
+                                id="job-title"
+                                class="input"
+                                type="text"
+                                maxlength="40"
+                                placeholder="Esempio: Traduttore, cameriere..."
+                            />
+                        </div>
+
+                        <div class="control">
+                            <label for="job-company">Nome dell'azienda</label>
+                            <input
+                                id="job-company"
+                                class="input"
+                                type="text"
+                                maxlength="40"
+                                placeholder="Esempio: Google, Facebook, DHL..."
+                            />
+                        </div>
+
+                        <div class="control">
+                            <label for="job-place">Luogo di lavoro</label>
+                            <input
+                                id="job-place"
+                                class="input"
+                                type="text"
+                                maxlength="40"
+                                placeholder="Esempio: Londra, New York..."
+                            />
+                        </div>
+                        <div class="remote-job">
+                            <input
+                                type="checkbox"
+                                id="remote-job"
+                                name="remote-job"
+                            />
+                            <label for="remote-job">Lavoro da remoto</label>
+                        </div>
+                        <div class="published-type">
+                            <label for="offer-type">Settore lavorativo</label>
+                            <div class="select">
+                                <select name="offer-type" id="offer-type">
+                                    <option>Amministrazione</option>
+                                    <option>Logistica</option>
+                                    <option>IT</option>
+                                    <option>Risorse Umane</option>
+                                    <option>Segreteria</option>
+                                    <option>Management</option>
+                                    <option>Traduzione</option>
+                                    <option>Altro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="published-contract">
+                            <label for="contract-type">Tipo di contratto</label>
+                            <div class="select">
+                                <select name="contract-type" id="contract-type">
+                                    <option>Indeterminato</option>
+                                    <option>Determinato</option>
+                                    <option>Stage/tirocinio</option>
+                                    <option>Freelance</option>
+                                    <option>Part-time</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="job__detailed-info">
+                        <legend>Descrizione del lavoro</legend>
+                        <label for="short-description">Breve descrizione</label>
+                        <textarea
+                            id="short-description"
+                            class="textarea"
+                            placeholder="Breve descrizione del lavoro"
+                            rows="5"
+                            maxlength="275"
+                            minlength="10"
+                        ></textarea>
+
+                        <label for="detailed-description"
+                            >Descrizione dettagliata</label
+                        >
+                        <textarea
+                            id="detailed-description"
+                            class="textarea"
+                            placeholder="Breve descrizione del lavoro"
+                            rows="10"
+                            maxlength="1000"
+                            minlength="10"
+                        ></textarea>
+
+                        <div class="file">
+                            <label class="file-label">
+                                <input
+                                    class="file-input"
+                                    type="file"
+                                    name="resume"
+                                />
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                        Choose a file…
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <label class="checkbox">
+                        <input type="checkbox" />
+                        I agree to the <a href="#">terms and conditions</a>
+                    </label>
+                </form>
             </main>
             <footer class="page-footer">
                 <nav class="footer-nav">
                     <ul class="footer-nav__list">
                         <li class="footer-nav__item">
-                            <a href="" class="page-nav__link"
+                            <a href="index.html" class="page-nav__link"
                                 >Pagina principale</a
                             >
                         </li>
                         <li class="footer-nav__item">
-                            <a href="" class="page-nav__link"
+                            <a href="jobsearch.html" class="page-nav__link"
                                 >Lista dei lavori</a
                             >
                         </li>
                         <li class="footer-nav__item">
-                            <a href="" class="page-nav__link"
+                            <a href="insertnewjob.html" class="page-nav__link"
                                 >Pubblica annuncio</a
                             >
                         </li>
                     </ul>
                 </nav>
                 <section class="footer-jobpost">
-                    <p>Post a new job!...</p>
+                    <a class="jobpost__link" href="insertnewjob.html"
+                        >Inserisci un nuovo lavoro</a
+                    >
                 </section>
             </footer>
         </div>
