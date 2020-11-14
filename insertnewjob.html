@@ -102,131 +102,133 @@
                         <legend class="job-form__title">
                             Informazioni principali
                         </legend>
-                        <div class="control">
-                            <label for="job-title">Posizione offerta</label>
-                            <input
-                                id="job-title"
-                                class="input"
-                                type="text"
-                                maxlength="40"
-                                placeholder="Esempio: Traduttore, cameriere..."
-                            />
-                        </div>
+                        <div class="job__control-form">
+                            <div class="control">
+                                <label for="job-title">Posizione offerta</label>
+                                <input
+                                    id="job-title"
+                                    class="input"
+                                    type="text"
+                                    maxlength="40"
+                                    placeholder="Esempio: Traduttore, cameriere..."
+                                    required
+                                />
+                            </div>
 
-                        <div class="control">
-                            <label for="job-company">Nome dell'azienda</label>
-                            <input
-                                id="job-company"
-                                class="input"
-                                type="text"
-                                maxlength="40"
-                                placeholder="Esempio: Google, Facebook, DHL..."
-                                required
-                            />
-                        </div>
+                            <div class="control">
+                                <label for="job-company"
+                                    >Nome dell'azienda</label
+                                >
+                                <input
+                                    id="job-company"
+                                    class="input"
+                                    type="text"
+                                    maxlength="40"
+                                    placeholder="Esempio: Google, Facebook, DHL..."
+                                    required
+                                />
+                            </div>
 
-                        <div class="control">
-                            <label for="job-place">Luogo di lavoro</label>
-                            <input
-                                id="job-place"
-                                class="input"
-                                type="text"
-                                maxlength="40"
-                                placeholder="Esempio: Londra, New York..."
-                                required
-                            />
-                        </div>
-                        <div class="remote-job">
-                            <label for="remote-job">Lavoro da remoto</label>
-                            <input
-                                type="checkbox"
-                                id="remote-job"
-                                name="remote-job"
-                            />
-                        </div>
-
-                        <div class="published-type">
-                            <label for="offer-type">Settore lavorativo</label>
-                            <div class="select">
-                                <select name="offer-type" id="offer-type">
-                                    <option>Amministrazione</option>
-                                    <option>Logistica</option>
-                                    <option>IT</option>
-                                    <option>Risorse Umane</option>
-                                    <option>Segreteria</option>
-                                    <option>Management</option>
-                                    <option>Traduzione</option>
-                                    <option>Altro</option>
-                                </select>
+                            <div class="control">
+                                <label for="job-place">Luogo di lavoro</label>
+                                <input
+                                    id="job-place"
+                                    class="input"
+                                    type="text"
+                                    maxlength="40"
+                                    placeholder="Esempio: Londra, New York..."
+                                    required
+                                />
+                            </div>
+                            <div class="remote-job">
+                                <label for="remote-job">Lavoro da remoto</label>
+                                <input
+                                    type="checkbox"
+                                    id="remote-job"
+                                    name="remote-job"
+                                />
                             </div>
                         </div>
-                        <div class="published-contract">
-                            <label for="contract-type">Tipo di contratto</label>
-                            <div class="select">
-                                <select name="contract-type" id="contract-type">
-                                    <option>Indeterminato</option>
-                                    <option>Determinato</option>
-                                    <option>Stage/tirocinio</option>
-                                    <option>Freelance</option>
-                                    <option>Part-time</option>
-                                </select>
+                        <div class="job__select-form">
+                            <div class="published-type">
+                                <label for="offer-type"
+                                    >Settore lavorativo</label
+                                >
+                                <div class="select">
+                                    <select name="offer-type" id="offer-type">
+                                        <option>Amministrazione</option>
+                                        <option>Logistica</option>
+                                        <option>IT</option>
+                                        <option>Risorse Umane</option>
+                                        <option>Segreteria</option>
+                                        <option>Management</option>
+                                        <option>Traduzione</option>
+                                        <option>Altro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="published-contract">
+                                <label for="contract-type"
+                                    >Tipo di contratto</label
+                                >
+                                <div class="select">
+                                    <select
+                                        name="contract-type"
+                                        id="contract-type"
+                                    >
+                                        <option>Indeterminato</option>
+                                        <option>Determinato</option>
+                                        <option>Stage/tirocinio</option>
+                                        <option>Freelance</option>
+                                        <option>Part-time</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
 
                     <fieldset class="job__detailed-info">
-                        <legend class="job-form__title">Descrizione</legend>
-                        <label for="short-description"
-                            >Breve descrizione:</label
-                        >
-                        <textarea
-                            id="short-description"
-                            class="textarea"
-                            placeholder="Breve descrizione del lavoro"
-                            rows="5"
-                            maxlength="275"
-                            minlength="10"
-                        ></textarea>
+                        <legend class="job-form__title">
+                            Informazioni aggiuntive
+                        </legend>
 
-                        <label for="detailed-description"
-                            >Descrizione dettagliata:</label
-                        >
-                        <textarea
-                            id="detailed-description"
-                            class="textarea"
-                            placeholder="Breve descrizione del lavoro"
-                            rows="10"
-                            maxlength="1000"
-                            minlength="10"
-                        ></textarea>
-
-                        <div class="file">
-                            <label class="file-label">
-                                <input
-                                    class="file-input"
-                                    type="file"
-                                    name="resume"
-                                />
-                                <span class="file-cta">
-                                    <span class="file-icon">
-                                        <i class="fas fa-upload"></i>
-                                    </span>
-                                    <span class="file-label">
-                                        Choose a file…
-                                    </span>
-                                </span>
-                            </label>
+                        <div class="info__short-desc">
+                            <label for="short-description"
+                                >Breve descrizione:</label
+                            >
+                            <textarea
+                                id="short-description"
+                                class="textarea"
+                                placeholder="Inserisci una breve descrizione dell'offerta (massimo 250 caratteri)..."
+                                rows="5"
+                                maxlength="250"
+                                minlength="10"
+                            ></textarea>
+                        </div>
+                        <div class="info__long-desc">
+                            <label for="detailed-description"
+                                >Descrizione dettagliata:</label
+                            >
+                            <textarea
+                                id="detailed-description"
+                                class="textarea"
+                                placeholder="Inserisci la descrizione dettagliata dell'offerta..."
+                                rows="10"
+                                maxlength="1000"
+                                minlength="10"
+                            ></textarea>
                         </div>
                     </fieldset>
                     <label class="checkbox">
                         <input type="checkbox" />
-                        I agree to the <a href="#">terms and conditions</a>
+                        Acconsento al trattamento dei dati
+                        <a href="#">termini e condizioni</a>
                     </label>
                     <input
-                            type="submit"
-                            value="Inserisci proposta"
-                            class="insertjob-btn button"
-                        />
+                        type="submit"
+                        value="Inserisci proposta"
+                        class="insertjob-btn button"
+                    />
                 </form>
             </main>
             <footer class="page-footer">

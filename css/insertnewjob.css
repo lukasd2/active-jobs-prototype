@@ -5,10 +5,12 @@
 
 .insert-job {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 .job__basic-info label {
     display: inline-flex;
-    width: 140px;
+    width: 135px;
 }
 
 .job__basic-info {
@@ -25,6 +27,15 @@
     padding: 20px 0px;
 }
 
+.job-form__title:after {
+    content: "";
+    display: flex;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 8px;
+    border-bottom: 2px solid #18a0fb;
+}
+
 .control {
     display: flex;
     padding-bottom: 10px;
@@ -37,7 +48,6 @@ fieldset {
 }
 
 .remote-job {
-    align-self: left;
     font-size: 1rem;
     margin-bottom: 40px;
 }
@@ -66,6 +76,8 @@ fieldset {
 
 .insertjob-btn {
     margin-top: 20px;
+    width: 200px;
+    align-self: center;
 }
 /* consider module */
 .job__basic-info input[type="checkbox"] {
@@ -98,4 +110,36 @@ fieldset {
     font-size: 150%;
     left: 0.0625em;
     top: -0.25em;
+}
+
+@media only screen and (min-width: 48em) {
+    .job-form__title {
+        padding: 40px 0px;
+    }
+    .job__basic-info {
+        margin-left: 5%;
+        margin-right: 5%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .job__detailed-info {
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+    }
+
+    .info__short-desc {
+        flex: 1;
+        margin-right: 5%;
+    }
+    .info__long-desc {
+        flex: 1;
+    }
+
+    .job__control-form {
+        text-align: left;
+    }
+    .insertjob-btn {
+        height: 3.5em;
+    }
 }
