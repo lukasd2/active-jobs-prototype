@@ -5,19 +5,30 @@
 
 .insert-job {
     padding: 10px;
-    border: 1px solid green;
+}
+.job__basic-info label {
+    display: inline-flex;
+    width: 140px;
 }
 
 .job__basic-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #18a0fb;
+}
+
+.job-form__title {
+    margin: 0 auto;
+    font-size: 1.1rem;
+    padding: 20px 0px;
 }
 
 .control {
     display: flex;
-    align-self: flex-start;
     padding-bottom: 10px;
+    align-items: center;
 }
 
 .control,
@@ -26,13 +37,65 @@ fieldset {
 }
 
 .remote-job {
-    align-self: center;
+    align-self: left;
+    font-size: 1rem;
+    margin-bottom: 40px;
 }
 
 .control input {
     width: auto;
 }
-.control label {
-    width: 140px;
+
+.published-type,
+.published-contract {
+    font-size: 1rem;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.job__detailed-info {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: left;
+}
+.job__detailed-info label {
     display: inline-flex;
+    padding: 15px 0px;
+}
+
+.insertjob-btn {
+    margin-top: 20px;
+}
+/* consider module */
+.job__basic-info input[type="checkbox"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    outline: none;
+    font-size: inherit;
+    width: 1.5em;
+    height: 1.5em;
+    background: white;
+    border-radius: 20%;
+    border: 0.125em solid #555;
+    position: relative;
+}
+
+.job__basic-info input[type="checkbox"] + label {
+    cursor: pointer;
+}
+
+.job__basic-info input[type="checkbox"]:checked {
+    background: #18a0fb;
+}
+
+.job__basic-info input[type="checkbox"]:checked:after {
+    content: "✔";
+    color: white;
+    position: absolute;
+    font-size: 150%;
+    left: 0.0625em;
+    top: -0.25em;
 }

@@ -99,7 +99,9 @@
 
                 <form class="insert-job">
                     <fieldset class="job__basic-info">
-                        <legend>Informazioni principali</legend>
+                        <legend class="job-form__title">
+                            Informazioni principali
+                        </legend>
                         <div class="control">
                             <label for="job-title">Posizione offerta</label>
                             <input
@@ -119,6 +121,7 @@
                                 type="text"
                                 maxlength="40"
                                 placeholder="Esempio: Google, Facebook, DHL..."
+                                required
                             />
                         </div>
 
@@ -130,16 +133,18 @@
                                 type="text"
                                 maxlength="40"
                                 placeholder="Esempio: Londra, New York..."
+                                required
                             />
                         </div>
                         <div class="remote-job">
+                            <label for="remote-job">Lavoro da remoto</label>
                             <input
                                 type="checkbox"
                                 id="remote-job"
                                 name="remote-job"
                             />
-                            <label for="remote-job">Lavoro da remoto</label>
                         </div>
+
                         <div class="published-type">
                             <label for="offer-type">Settore lavorativo</label>
                             <div class="select">
@@ -170,8 +175,10 @@
                     </fieldset>
 
                     <fieldset class="job__detailed-info">
-                        <legend>Descrizione del lavoro</legend>
-                        <label for="short-description">Breve descrizione</label>
+                        <legend class="job-form__title">Descrizione</legend>
+                        <label for="short-description"
+                            >Breve descrizione:</label
+                        >
                         <textarea
                             id="short-description"
                             class="textarea"
@@ -182,7 +189,7 @@
                         ></textarea>
 
                         <label for="detailed-description"
-                            >Descrizione dettagliata</label
+                            >Descrizione dettagliata:</label
                         >
                         <textarea
                             id="detailed-description"
@@ -215,6 +222,11 @@
                         <input type="checkbox" />
                         I agree to the <a href="#">terms and conditions</a>
                     </label>
+                    <input
+                            type="submit"
+                            value="Inserisci proposta"
+                            class="insertjob-btn button"
+                        />
                 </form>
             </main>
             <footer class="page-footer">
