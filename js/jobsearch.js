@@ -47,13 +47,11 @@ function searchResult(ev) {
 function showJobDetails(ev) {
     const jobListingsContainer = document.querySelector(".job-listings");
     let target = ev.target;
-    console.log(target);
     if (target.classList.contains("job-listing__favorite")) {
         // target on favorites icon
         target.classList.toggle("is-red");
     } else if (jobListingsContainer.contains(target)) {
         // target of job card
-        console.log("success");
         if (checkCurrentResultion() <= 768) {
             const openModal = document.getElementById("openModal");
             openModal.classList.add("is-active");
