@@ -17,7 +17,7 @@
 .job__basic-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding-bottom: 20px;
     border-radius: 10px;
     border: 2px solid #18a0fb;
@@ -83,8 +83,12 @@ fieldset {
     margin-top: 20px;
     width: 200px;
     align-self: center;
+    border-radius: 10px;
+    background-color: #18a0fb;
+    color: #fff;
+    height: 3em;
 }
-/* consider module */
+/*too verbose, to be put inside a separate css module */
 .job__basic-info input[type="checkbox"] {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -116,6 +120,9 @@ fieldset {
     left: 0.0625em;
     top: -0.25em;
 }
+.terms-conditions {
+    margin: 15px 0px 5px 5px;
+}
 
 @media only screen and (min-width: 48em) {
     .job-form__title {
@@ -133,6 +140,13 @@ fieldset {
         display: flex;
     }
 
+    .job__select-form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
     .info__short-desc {
         flex: 1;
         margin-right: 5%;
@@ -146,5 +160,48 @@ fieldset {
     }
     .insertjob-btn {
         height: 3.5em;
+    }
+    .terms-conditions {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 68.75em) {
+    .control {
+        display: flex;
+        flex-direction: column;
+    }
+    .job__basic-info {
+        flex-direction: column;
+    }
+    .job__basic-info label {
+        width: auto;
+    }
+    .job__control-form {
+        display: flex;
+        justify-content: flex-start;
+        flex: 1;
+        align-items: baseline;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .remote-job {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .job__select-form {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .published-type,
+    .published-contract {
+        flex-direction: column;
     }
 }

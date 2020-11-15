@@ -92,7 +92,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 20px 5px 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -191,7 +191,7 @@
 }
 
 .btn-apply {
-    background-color: #FFA500;
+    background-color: #ffa500;
     color: #f2f2f2;
     padding: 25px;
 }
@@ -218,8 +218,14 @@
         justify-content: space-evenly;
     }
 
+    .remote-job,
+    .direct-job,
+    .active-job {
+        padding: 20px 0px;
+    }
+
     .filters_selects {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .published-date,
@@ -312,7 +318,7 @@
     }
 
     .work-preview {
-        font-size: 1rem;
+        font-size: 0.8571rem;
     }
 
     .work-preview__arrow {
@@ -321,5 +327,16 @@
     }
     .info__main {
         padding: 20px 20px;
+    }
+}
+@media only screen and (min-width: 68.75em) {
+    .jobpost__link {
+        font-size: 2.143rem;
+    }
+    .filters_selects {
+        flex-direction: row;
+    }
+    .work-preview {
+        font-size: 1rem;
     }
 }
