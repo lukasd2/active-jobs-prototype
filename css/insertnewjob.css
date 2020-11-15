@@ -203,7 +203,6 @@ fieldset {
         flex-direction: row;
         align-items: baseline;
         flex: 1;
-        align-self: baseline;
         margin-left: 10px;
     }
     .job__final-details {
@@ -223,7 +222,8 @@ fieldset {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .info__long-desc, .info__short-desc {
+    .info__long-desc,
+    .info__short-desc {
         text-align: center;
     }
 }
