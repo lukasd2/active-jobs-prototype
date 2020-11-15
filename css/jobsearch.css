@@ -336,6 +336,14 @@
     .filters_selects {
         flex-direction: row;
     }
+    .filters-checkbox {
+        flex-direction: row;
+    }
+    .remote-job,
+    .direct-job,
+    .active-job {
+        padding: 20px 20px;
+    }
     .work-preview {
         font-size: 1rem;
     }

@@ -173,9 +173,14 @@ fieldset {
     }
     .job__basic-info {
         flex-direction: column;
+        flex: 3;
     }
     .job__basic-info label {
         width: auto;
+    }
+    .job__detailed-info {
+        flex: 2;
+        margin-left: 0;
     }
     .job__control-form {
         display: flex;
@@ -197,11 +202,28 @@ fieldset {
         display: flex;
         flex-direction: row;
         align-items: baseline;
+        flex: 1;
+        align-self: baseline;
+        margin-left: 10px;
+    }
+    .job__final-details {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
     }
 
     .published-type,
     .published-contract {
         flex-direction: column;
-        margin: 0px 6px;
+        margin: 0px 10px;
+    }
+
+    .insert-job {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .info__long-desc, .info__short-desc {
+        text-align: center;
     }
 }

@@ -52,7 +52,7 @@ function showJobDetails(ev) {
         target.classList.toggle("is-red");
     } else if (jobListingsContainer.contains(target)) {
         // target of job card
-        if (checkCurrentResultion() <= 768) {
+        if (checkCurrentResultion() < 768) {
             const openModal = document.getElementById("openModal");
             openModal.classList.add("is-active");
             openModal.classList.add("is-clipped");
