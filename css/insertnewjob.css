@@ -7,6 +7,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 .job__basic-info label {
     display: inline-flex;
@@ -18,7 +19,9 @@
     flex-direction: column;
     align-items: flex-start;
     padding-bottom: 20px;
-    border-bottom: 2px solid #18a0fb;
+    border-radius: 10px;
+    border: 2px solid #18a0fb;
+    padding: 5px;
 }
 
 .job-form__title {
@@ -53,7 +56,7 @@ fieldset {
 }
 
 .control input {
-    width: auto;
+    width: 90%;
 }
 
 .published-type,
@@ -68,6 +71,8 @@ fieldset {
     font-size: 1rem;
     padding: 10px;
     text-align: left;
+    border-radius: 10px;
+    border: 2px solid #18a0fb;
 }
 .job__detailed-info label {
     display: inline-flex;
