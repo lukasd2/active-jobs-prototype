@@ -182,8 +182,6 @@ fieldset {
         justify-content: flex-start;
         flex: 1;
         align-items: baseline;
-        width: 100%;
-        justify-content: space-between;
     }
 
     .remote-job {
@@ -191,17 +189,19 @@ fieldset {
         flex-direction: column;
         align-items: center;
     }
+    #remote-job {
+        margin-top: 6px;
+    }
 
     .job__select-form {
         display: flex;
         flex-direction: row;
         align-items: baseline;
-        width: 100%;
-        justify-content: space-between;
     }
 
     .published-type,
     .published-contract {
         flex-direction: column;
+        margin: 0px 6px;
     }
 }
